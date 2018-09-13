@@ -21,14 +21,8 @@ function TspMap({ center, zoom, selectedId, route, domicileId, clickHandler, rem
           <Marker
             key={location.id}
             position={location}
+            onClick={() => removeHandler((route.length <= 1 || location.id !== domicileId) ? location.id : NaN)}
           >
-            <Popup>
-              <button
-                disabled={route.length > 1 && location.id === domicileId}
-                onClick={() => removeHandler(location.id)}
-              >x
-              </button>
-            </Popup>
             <Tooltip
               // The permanent and non-permanent tooltips are different components
               // and need to have different keys

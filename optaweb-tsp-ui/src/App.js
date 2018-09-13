@@ -37,7 +37,9 @@ class App extends Component {
   }
 
   onClickRemove(id) {
-    this.state.stompClient.send(`/app/place/${id}/delete`);
+    if (!isNaN(id)) {
+      this.state.stompClient.send(`/app/place/${id}/delete`);
+    }
   }
 
   onSelectLocation(id) {
