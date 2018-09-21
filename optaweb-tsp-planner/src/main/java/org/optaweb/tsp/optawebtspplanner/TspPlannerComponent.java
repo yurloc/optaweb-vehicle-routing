@@ -2,7 +2,6 @@ package org.optaweb.tsp.optawebtspplanner;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -205,7 +204,7 @@ public class TspPlannerComponent implements SolverEventListener<TspSolution> {
                 if (tsp.getDomicile().getLocation().getId().equals(airLocation.getId())) {
                     throw new UnsupportedOperationException("You can only remove domicile if it's the only location on map.");
                 }
-                solver.addProblemFactChanges(Arrays.asList(
+                solver.addProblemFactChange(
                         scoreDirector -> {
                             TspSolution workingSolution = scoreDirector.getWorkingSolution();
                             Visit visit = workingSolution.getVisitList().stream()
@@ -213,13 +212,6 @@ public class TspPlannerComponent implements SolverEventListener<TspSolution> {
                                     .findFirst()
                                     .orElseThrow(() -> new IllegalArgumentException(
                                             "Invalid request for removing visit at " + airLocation));
-
-                            // Remove the visit
-                            scoreDirector.beforeEntityRemoved(visit);
-                            if (!workingSolution.getVisitList().remove(visit)) {
-                                throw new IllegalStateException("This is impossible.");
-                            }
-                            scoreDirector.afterEntityRemoved(visit);
 
                             // Fix the next visit and set its previousStandstill to the removed visit's previousStandstill
                             for (Visit nextVisit : workingSolution.getVisitList()) {
@@ -231,10 +223,14 @@ public class TspPlannerComponent implements SolverEventListener<TspSolution> {
                                 }
                             }
 
-                            scoreDirector.triggerVariableListeners();
-                        },
-                        scoreDirector -> {
-                            TspSolution workingSolution = scoreDirector.getWorkingSolution();
+                            // Remove the visit
+                            // A SolutionCloner clones planning entity lists (such as processList), so no need
+                            // to clone the processList here
+                            scoreDirector.beforeEntityRemoved(visit);
+                            if (!workingSolution.getVisitList().remove(visit)) {
+                                throw new IllegalStateException("This is impossible.");
+                            }
+                            scoreDirector.afterEntityRemoved(visit);
 
                             AirLocation workingAirLocation = scoreDirector.lookUpWorkingObject(airLocation);
                             if (workingAirLocation == null) {
@@ -251,7 +247,7 @@ public class TspPlannerComponent implements SolverEventListener<TspSolution> {
 
                             scoreDirector.triggerVariableListeners();
                         }
-                ));
+                );
             }
         }
     }
