@@ -18,6 +18,7 @@
 
 import L from 'leaflet';
 import React from 'react';
+import type { Viewport } from 'react-leaflet';
 import { Map, Marker, Polygon, TileLayer, Tooltip, ZoomControl } from 'react-leaflet';
 
 type LocationType = {
@@ -27,14 +28,12 @@ type LocationType = {
 };
 
 type Props = {
-  center: { lat: number, lng: number },
-  zoom: number,
   selectedId: number,
   route: Array<LocationType>,
   domicileId: number,
   clickHandler: Function, // FIXME function type
   removeHandler: Function
-};
+} & Viewport;
 
 function TspMap({
   center,

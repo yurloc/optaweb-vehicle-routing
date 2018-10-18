@@ -17,6 +17,8 @@
 // @flow
 
 import * as React from 'react';
+
+import type { Viewport } from 'react-leaflet';
 import SockJS from 'sockjs-client';
 import 'tachyons/css/tachyons.css';
 import webstomp from 'webstomp-client';
@@ -32,7 +34,6 @@ type LocationType = {
 };
 
 type State = {
-  center: { lat: number, lng: number },
   zoom: number,
   counter: number,
   selectedId: number,
@@ -40,17 +41,17 @@ type State = {
   domicileId: number,
   distance: string,
   stompClient?: Object, // FIXME library definition
-}
+} & Viewport
 
 class App extends React.Component<Props, State> {
   constructor() {
     super();
 
     this.state = {
-      center: {
-        lat: 49.23178,
-        lng: 16.57561,
-      },
+      center: [
+        49.23178,
+        16.57561,
+      ],
       zoom: 5,
       counter: -1,
       selectedId: NaN,
