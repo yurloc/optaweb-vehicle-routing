@@ -1,0 +1,7 @@
+// @flow
+
+export type LocationType = {
+  id: number,
+  lat: number,
+  lng: number,
+}

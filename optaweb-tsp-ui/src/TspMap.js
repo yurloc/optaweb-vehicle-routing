@@ -20,12 +20,7 @@ import L from 'leaflet';
 import React from 'react';
 import type { Viewport } from 'react-leaflet';
 import { Map, Marker, Polygon, TileLayer, Tooltip, ZoomControl } from 'react-leaflet';
-
-type LocationType = {
-  id: number,
-  lat: number,
-  lng: number
-};
+import type { LocationType } from './types.js.flow';
 
 type Props = {
   selectedId: number,

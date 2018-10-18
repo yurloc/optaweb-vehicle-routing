@@ -18,12 +18,7 @@
 
 import * as React from 'react';
 import Location from './Location';
-
-type LocationType = {
-  id: number,
-  lat: number,
-  lng: number
-};
+import type { LocationType } from './types.js.flow';
 
 type Props = {
   route: Array<LocationType>,
