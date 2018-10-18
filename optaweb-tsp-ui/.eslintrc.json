@@ -1,7 +1,12 @@
 {
-  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "extends": [
+    "airbnb",
+    "plugin:flowtype/recommended"
+  ],
   "plugins": [
-    "jest"
+    "jest",
+    "flowtype"
   ],
   "env": {
     "browser": true,

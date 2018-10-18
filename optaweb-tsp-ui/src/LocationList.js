@@ -14,11 +14,34 @@
  * limitations under the License.
  */
 
-import PropTypes from 'prop-types';
-import React from 'react';
+// @flow
+
+import * as React from 'react';
 import Location from './Location';
 
-function LocationList({ route, domicileId, distance, removeHandler, selectHandler, loadHandler }) {
+type LocationType = {
+  id: number,
+  lat: number,
+  lng: number
+};
+
+type Props = {
+  route: Array<LocationType>,
+  domicileId: number,
+  distance?: string,
+  removeHandler: Function, // FIXME function type
+  selectHandler: Function,
+  loadHandler: Function,
+};
+
+function LocationList({
+  route,
+  domicileId,
+  distance,
+  removeHandler,
+  selectHandler,
+  loadHandler,
+}: Props) {
   return (
     <div className={'leaflet-top leaflet-left leaflet-touch'}>
       <div className={'leaflet-control leaflet-bar w5 bg-white'}>
@@ -60,19 +83,6 @@ function LocationList({ route, domicileId, distance, removeHandler, selectHandle
     </div>
   );
 }
-
-LocationList.propTypes = {
-  route: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    lat: PropTypes.number.isRequired,
-    lng: PropTypes.number.isRequired,
-  })).isRequired,
-  domicileId: PropTypes.number.isRequired,
-  distance: PropTypes.string,
-  removeHandler: PropTypes.func.isRequired,
-  selectHandler: PropTypes.func.isRequired,
-  loadHandler: PropTypes.func.isRequired,
-};
 
 LocationList.defaultProps = {
   distance: '',

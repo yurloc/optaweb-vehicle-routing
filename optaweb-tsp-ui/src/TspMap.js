@@ -14,12 +14,37 @@
  * limitations under the License.
  */
 
+// @flow
+
 import L from 'leaflet';
-import PropTypes from 'prop-types';
 import React from 'react';
 import { Map, Marker, Polygon, TileLayer, Tooltip, ZoomControl } from 'react-leaflet';
 
-function TspMap({ center, zoom, selectedId, route, domicileId, clickHandler, removeHandler }) {
+type LocationType = {
+  id: number,
+  lat: number,
+  lng: number
+};
+
+type Props = {
+  center: { lat: number, lng: number },
+  zoom: number,
+  selectedId: number,
+  route: Array<LocationType>,
+  domicileId: number,
+  clickHandler: Function, // FIXME function type
+  removeHandler: Function
+};
+
+function TspMap({
+  center,
+  zoom,
+  selectedId,
+  route,
+  domicileId,
+  clickHandler,
+  removeHandler,
+}: Props) {
   const homeIcon = L.icon({
     iconUrl: 'if_big_house-home_2222740.png',
     shadowUrl: 'if_big_house-home_2222740_shadow.png',
@@ -72,22 +97,5 @@ function TspMap({ center, zoom, selectedId, route, domicileId, clickHandler, rem
     </Map>
   );
 }
-
-TspMap.propTypes = {
-  center: PropTypes.shape({
-    lat: PropTypes.number.isRequired,
-    lng: PropTypes.number.isRequired,
-  }).isRequired,
-  zoom: PropTypes.number.isRequired,
-  selectedId: PropTypes.number.isRequired,
-  route: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    lat: PropTypes.number.isRequired,
-    lng: PropTypes.number.isRequired,
-  })).isRequired,
-  domicileId: PropTypes.number.isRequired,
-  clickHandler: PropTypes.func.isRequired,
-  removeHandler: PropTypes.func.isRequired,
-};
 
 export default TspMap;

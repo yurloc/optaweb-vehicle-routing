@@ -14,14 +14,35 @@
  * limitations under the License.
  */
 
-import React, { Component } from 'react';
+// @flow
+
+import * as React from 'react';
 import SockJS from 'sockjs-client';
 import 'tachyons/css/tachyons.css';
 import webstomp from 'webstomp-client';
 import LocationList from './LocationList';
 import TspMap from './TspMap';
 
-class App extends Component {
+type Props = {}
+
+type LocationType = {
+  id: number,
+  lat: number,
+  lng: number
+};
+
+type State = {
+  center: { lat: number, lng: number },
+  zoom: number,
+  counter: number,
+  selectedId: number,
+  route: Array<LocationType>,
+  domicileId: number,
+  distance: string,
+  stompClient?: Object, // FIXME library definition
+}
+
+class App extends React.Component<Props, State> {
   constructor() {
     super();
 

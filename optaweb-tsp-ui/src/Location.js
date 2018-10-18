@@ -14,10 +14,18 @@
  * limitations under the License.
  */
 
-import PropTypes from 'prop-types';
-import React from 'react';
+// @flow
 
-function Location({ id, removeDisabled, removeHandler, selectHandler }) {
+import * as React from 'react';
+
+type Props = {
+  id: number,
+  removeDisabled: boolean,
+  removeHandler: Function,
+  selectHandler: Function,
+};
+
+function Location({ id, removeDisabled, removeHandler, selectHandler }: Props) {
   return (
     <div
       key={id}
@@ -31,12 +39,5 @@ function Location({ id, removeDisabled, removeHandler, selectHandler }) {
     </div>
   );
 }
-
-Location.propTypes = {
-  id: PropTypes.number.isRequired,
-  removeDisabled: PropTypes.bool.isRequired,
-  removeHandler: PropTypes.func.isRequired,
-  selectHandler: PropTypes.func.isRequired,
-};
 
 export default Location;
