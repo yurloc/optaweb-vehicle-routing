@@ -16,7 +16,7 @@
 
 // @flow
 
-import L from 'leaflet';
+import { Icon } from 'leaflet';
 import React from 'react';
 import { Map, Marker, Polygon, TileLayer, Tooltip, ZoomControl } from 'react-leaflet';
 import type { LatLng } from 'react-leaflet/lib/types';
@@ -41,7 +41,7 @@ function TspMap({
   clickHandler,
   removeHandler,
 }: Props) {
-  const homeIcon = L.icon({
+  const homeIcon: Icon = new Icon({
     iconUrl: 'if_big_house-home_2222740.png',
     shadowUrl: 'if_big_house-home_2222740_shadow.png',
 
@@ -52,7 +52,7 @@ function TspMap({
     popupAnchor: [0, -10],
   });
 
-  const defaultIcon = new L.Icon.Default();
+  const defaultIcon = new Icon.Default();
 
   return (
     <Map
