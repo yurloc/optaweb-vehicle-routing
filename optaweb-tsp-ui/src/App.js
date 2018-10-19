@@ -41,7 +41,7 @@ type State = {
   route: Array<LocationType>,
   domicileId: number,
   distance: string,
-  stompClient?: Object, // FIXME library definition
+  stompClient: ?Object, // FIXME library definition
 }
 
 class App extends React.Component<Props, State> {

@@ -23,7 +23,7 @@ import type { ClickButtonHandler, LocationHandler, LocationType } from './types.
 type Props = {
   route: Array<LocationType>,
   domicileId: number,
-  distance?: string,
+  distance: ?string,
   removeHandler: LocationHandler,
   selectHandler: LocationHandler,
   loadHandler: ClickButtonHandler,
