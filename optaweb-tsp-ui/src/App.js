@@ -93,7 +93,7 @@ class App extends React.Component<Props, State> {
     this.setState({ selectedId: id });
   };
 
-  connect(socketUrl, successCallback) {
+  connect(socketUrl: string, successCallback: () => void) {
     const webSocket = new SockJS(socketUrl);
     const stompClient = webstomp.over(webSocket, { debug: true });
     this.setState({ stompClient });
@@ -119,7 +119,7 @@ class App extends React.Component<Props, State> {
 
   render() {
     const { center, zoom, selectedId, route, domicileId, distance } = this.state;
-    console.log(`Render, center: ${center}, route: [${route}], selected: ${selectedId}`);
+    console.log(`Render, center: ${center.toString()}, route: [${route.toString()}], selected: ${selectedId}`);
 
     return (
       <div>
