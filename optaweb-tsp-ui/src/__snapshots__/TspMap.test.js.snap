@@ -198,6 +198,7 @@ ShallowWrapper {
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "render": [Function],
+          Symbol(Symbol.hasInstance): [Function],
         },
       },
       Object {
@@ -212,6 +213,7 @@ ShallowWrapper {
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "render": [Function],
+          Symbol(Symbol.hasInstance): [Function],
         },
       },
       Object {
@@ -272,11 +274,13 @@ ShallowWrapper {
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
           },
         },
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "render": [Function],
+          Symbol(Symbol.hasInstance): [Function],
         },
       },
       Object {
@@ -314,11 +318,13 @@ ShallowWrapper {
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
           },
         },
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "render": [Function],
+          Symbol(Symbol.hasInstance): [Function],
         },
       },
       Object {
@@ -356,11 +362,13 @@ ShallowWrapper {
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
           },
         },
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "render": [Function],
+          Symbol(Symbol.hasInstance): [Function],
         },
       },
       Object {
@@ -392,6 +400,7 @@ ShallowWrapper {
         "type": Object {
           "$$typeof": Symbol(react.forward_ref),
           "render": [Function],
+          Symbol(Symbol.hasInstance): [Function],
         },
       },
     ],
@@ -552,6 +561,7 @@ ShallowWrapper {
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
           },
         },
         Object {
@@ -566,6 +576,7 @@ ShallowWrapper {
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
           },
         },
         Object {
@@ -626,11 +637,13 @@ ShallowWrapper {
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
               "render": [Function],
+              Symbol(Symbol.hasInstance): [Function],
             },
           },
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
           },
         },
         Object {
@@ -668,11 +681,13 @@ ShallowWrapper {
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
               "render": [Function],
+              Symbol(Symbol.hasInstance): [Function],
             },
           },
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
           },
         },
         Object {
@@ -710,11 +725,13 @@ ShallowWrapper {
             "type": Object {
               "$$typeof": Symbol(react.forward_ref),
               "render": [Function],
+              Symbol(Symbol.hasInstance): [Function],
             },
           },
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
           },
         },
         Object {
@@ -746,6 +763,7 @@ ShallowWrapper {
           "type": Object {
             "$$typeof": Symbol(react.forward_ref),
             "render": [Function],
+            Symbol(Symbol.hasInstance): [Function],
           },
         },
       ],
