@@ -18,7 +18,7 @@
 
 import * as React from 'react';
 
-import type { Viewport } from 'react-leaflet';
+import type { LatLng } from 'react-leaflet/src';
 import SockJS from 'sockjs-client';
 import 'tachyons/css/tachyons.css';
 import webstomp from 'webstomp-client';
@@ -35,13 +35,14 @@ type LocationType = {
 
 type State = {
   zoom: number,
+  center: LatLng,
   counter: number,
   selectedId: number,
   route: Array<LocationType>,
   domicileId: number,
   distance: string,
   stompClient?: Object, // FIXME library definition
-} & Viewport
+}
 
 class App extends React.Component<Props, State> {
   constructor() {
@@ -73,24 +74,24 @@ class App extends React.Component<Props, State> {
     });
   }
 
-  onClickLoad() {
+  onClickLoad = () => {
     this.state.stompClient.send('/app/demo');
-  }
+  };
 
-  onClickMap(e) {
+  onClickMap = (e: { latlng: number[] }) => {
     console.log(e.latlng);
     this.state.stompClient.send('/app/place', JSON.stringify(e.latlng));
-  }
+  };
 
-  onClickRemove(id) {
+  onClickRemove = (id: number) => {
     if (id !== this.state.domicileId || this.state.route.length === 1) {
       this.state.stompClient.send(`/app/place/${id}/delete`);
     }
-  }
+  };
 
-  onSelectLocation(id) {
+  onSelectLocation = (id: number) => {
     this.setState({ selectedId: id });
-  }
+  };
 
   connect(socketUrl, successCallback) {
     const webSocket = new SockJS(socketUrl);

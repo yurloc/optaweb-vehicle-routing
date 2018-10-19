@@ -18,15 +18,15 @@
 
 import * as React from 'react';
 import Location from './Location';
-import type { LocationType } from './types.js.flow';
+import type { ClickButtonHandler, LocationHandler, LocationType } from './types.js.flow';
 
 type Props = {
   route: Array<LocationType>,
   domicileId: number,
   distance?: string,
-  removeHandler: Function, // FIXME function type
-  selectHandler: Function,
-  loadHandler: Function,
+  removeHandler: LocationHandler,
+  selectHandler: LocationHandler,
+  loadHandler: ClickButtonHandler,
 };
 
 function LocationList({

@@ -5,3 +5,11 @@ export type LocationType = {
   lat: number,
   lng: number,
 }
+
+export type LocationHandler = (
+  id: number
+) => void
+
+export type ClickButtonHandler = (
+  e: SyntheticEvent<HTMLButtonElement>
+) => void

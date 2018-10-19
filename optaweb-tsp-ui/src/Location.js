@@ -17,12 +17,13 @@
 // @flow
 
 import * as React from 'react';
+import type { LocationHandler } from './types.js.flow';
 
 type Props = {
   id: number,
   removeDisabled: boolean,
-  removeHandler: Function,
-  selectHandler: Function,
+  removeHandler: LocationHandler,
+  selectHandler: (e: number) => void,
 };
 
 function Location({ id, removeDisabled, removeHandler, selectHandler }: Props) {
