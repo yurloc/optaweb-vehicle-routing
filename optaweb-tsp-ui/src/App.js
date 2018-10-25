@@ -21,7 +21,8 @@ import * as React from 'react';
 import type { LatLng } from 'react-leaflet/src';
 import SockJS from 'sockjs-client';
 import 'tachyons/css/tachyons.css';
-import webstomp from 'webstomp-client';
+// FIXME Flow complains about webstomp
+import webstomp, { type WebStomp } from 'webstomp-client';
 import LocationList from './LocationList';
 import TspMap from './TspMap';
 
@@ -41,7 +42,7 @@ type State = {
   route: Array<LocationType>,
   domicileId: number,
   distance: string,
-  stompClient: ?Object, // FIXME library definition
+  stompClient: ?WebStomp,
 }
 
 class App extends React.Component<Props, State> {
@@ -75,15 +76,24 @@ class App extends React.Component<Props, State> {
   }
 
   onClickLoad = () => {
+    if (this.state.stompClient === null || this.state.stompClient === undefined) {
+      return;
+    }
     this.state.stompClient.send('/app/demo');
   };
 
   onClickMap = (e: { latlng: number[] }) => {
     console.log(e.latlng);
+    if (this.state.stompClient === null || this.state.stompClient === undefined) {
+      return;
+    }
     this.state.stompClient.send('/app/place', JSON.stringify(e.latlng));
   };
 
   onClickRemove = (id: number) => {
+    if (this.state.stompClient === null || this.state.stompClient === undefined) {
+      return;
+    }
     if (id !== this.state.domicileId || this.state.route.length === 1) {
       this.state.stompClient.send(`/app/place/${id}/delete`);
     }
@@ -107,6 +117,10 @@ class App extends React.Component<Props, State> {
   }
 
   subscribe() {
+    if (this.state.stompClient === null || this.state.stompClient === undefined) {
+      return;
+    }
+
     this.state.stompClient.subscribe('/topic/route', (message) => {
       const tsp = JSON.parse(message.body);
       this.setState({

@@ -14,7 +14,18 @@
  */
 
 declare module 'webstomp-client' {
-  declare module.exports: any;
+  declare export class WebStomp {
+    // FIXME currently not used
+    // static over(ws: Object, options?: Object): WebStomp;
+    // connect(headers: Object, connectCallback: Function): void;
+    // connect(headers: Object, connectCallback: Function, errorCallback: Function): void;
+    // connect(login, passcode, connectCallback)
+    // connect(login, passcode, connectCallback, errorCallback)
+    // connect(login, passcode, connectCallback, errorCallback, host)
+
+    send(destination: string, body?: string, headers?: Object): void;
+    subscribe(destination: string, callback: Function, headers?: Object): void;
+  }
 }
 
 /**
