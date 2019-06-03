@@ -43,6 +43,7 @@ import { DemoDropdown } from 'ui/components/DemoDropdown';
 import LocationList from 'ui/components/LocationList';
 import RouteMap from 'ui/components/RouteMap';
 import SearchBox, { Result } from 'ui/components/SearchBox';
+import { BACKEND_URL } from 'environment';
 
 export const ID_CLEAR_BUTTON = 'clear-button';
 export const ID_EXPORT_BUTTON = 'export-button';
@@ -151,7 +152,7 @@ export class Demo extends React.Component<DemoProps, DemoState> {
     } = this.props;
 
     const exportDataSet = () => {
-      window.open(`${process.env.REACT_APP_BACKEND_URL}/dataset/export`);
+      window.open(`${BACKEND_URL}/dataset/export`);
     };
 
     return (
