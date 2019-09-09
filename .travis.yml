@@ -14,7 +14,7 @@ cache:
 # https://docs.travis-ci.com/user/languages/java/#projects-using-maven
 #
 # We also want to prevent Maven's install phase from writing to ~/.m2/repository, which is cached.
-install: mvn dependency:go-offline -Pcode-coverage,sonar --show-version
+install: mvn dependency:go-offline -Pcode-coverage,sonar --show-version --quiet
 # do not install to avoid dirtying the cache
 script:
   - mvn verify -Pcode-coverage --show-version
@@ -28,3 +28,6 @@ script:
     && unzip -q *.zip
     && cd optaweb-vehicle-routing-distribution-*/sources
     && mvn validate
+before_cache:
+  # Remove resolver-status.properties, which are updated with each Maven build and invalidate the cache.
+  - find $HOME/.m2 -name resolver-status.properties -exec rm {} \;
