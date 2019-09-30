@@ -121,6 +121,12 @@
   </build>
 
   <profiles>
+    <profile>
+      <id>openshift</id>
+      <properties>
+        <maven.min.version>3.5.0</maven.min.version>
+      </properties>
+    </profile>
     <!--
       Include distribution module by default but allow to exclude it to prevent inaccurate Sonar coverage analysis.
       When the distribution module is included, it affects Sonar project configuration in a mysterious way resulting
