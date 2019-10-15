@@ -7,7 +7,7 @@ ADD https://docs.google.com/uc?export=download&id=1zsm9L7zfTRqvddaKliPHVRML1GMfD
 ADD https://docs.google.com/uc?export=download&id=1370BKmkiaK9NA642elgBg--q45rbF7PG /deployments/local/data/atms_in_boston_40.yaml
 
 
-COPY target/*.jar /deployments
+COPY target/*-exec.jar /deployments
 
 USER root
 RUN chown -R jboss:jboss /deployments/local && \
