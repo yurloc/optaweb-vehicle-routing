@@ -1,6 +1,6 @@
 FROM fabric8/java-centos-openjdk8-jdk
 
-ENV SPRING_APPLICATION_JSON {\"app\": {\"routing\": {\"osm-file\": \"boston.osm.pbf\"},	\"region\": {\"country-codes\": \"US\"}}}
+ENV SPRING_APPLICATION_JSON '{"app": {"routing": {"osm-file": "boston.osm.pbf"},	"region": {"country-codes": "US"}}}'
 
 ADD https://docs.google.com/uc?export=download&id=1zfCar7alWFvaZewm60Upy7E8gyxmfLlN /deployments/local/openstreetmap/boston.osm.pbf
 ADD https://docs.google.com/uc?export=download&id=1zsm9L7zfTRqvddaKliPHVRML1GMfD5pE /deployments/local/data/hosipitals_in_massachusetts_65.yaml
