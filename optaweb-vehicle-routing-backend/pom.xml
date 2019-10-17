@@ -259,6 +259,12 @@
 
   <profiles>
     <profile>
+      <id>openshift</id>
+      <build>
+        <finalName>${project.artifactId}</finalName>
+      </build>
+    </profile>
+    <profile>
       <id>mutationCoverage</id>
       <build>
         <plugins>
