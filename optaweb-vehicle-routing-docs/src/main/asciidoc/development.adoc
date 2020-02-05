@@ -1,0 +1,112 @@
+== Starting the application
+
+First, clone this repository and `cd` into it.
+
+Frontend and backend are built and run independently.
+Open two terminal windows.
+Start the backend first, and then, when the backend is ready, start the frontend.
+
+=== Running the backend
+
+JDK 8 is the only system prerequisite for the backend.
+To install OpenJDK 8 on Fedora, run:
+
+[source,shell]
+----
+sudo dnf install java-1.8.0-openjdk-devel
+----
+
+. Download OpenStreetMap data for a region.
+For demonstration purposes, we use data for Belgium from Geofabrik:
+.. Open http://download.geofabrik.de/europe/belgium.html.
+.. Download the OSM file http://download.geofabrik.de/europe/belgium-latest.osm.pbf[belgium-latest.osm.pbf].
+.. Save it to `optaweb-vehicle-routing/optaweb-vehicle-routing-backend/local/openstreetmap/belgium-latest.osm.pbf`.
+
+. Build backend:
++
+[source,shell]
+----
+cd optaweb-vehicle-routing-backend
+./mvnw install
+----
+
+. Run backend:
++
+[source,shell]
+----
+java -jar target/optaweb-vehicle-routing-backend-*.jar
+----
+
+When you start the backend for the first time, it will need several minutes to process the geographical information.
+Monitoring the terminal output, wait until the processing is complete, then start the frontend.
+
+See
+// TODO move backend readme to the documentation module
+xref:optaweb-vehicle-routing-backend/README.adoc#development-guide[Backend Development Guide]
+to learn how to run backend during development.
+
+==== Configuring the working region
+
+If you want to try a different region than Belgium, download an OSM file from
+http://download.geofabrik.de/[Geofabrik]
+and select it with `app.routing.osm-file` property when starting the backend.
+
+Don't forget to use `app.region.country-codes` property to override geosearch results constraint.
+
+There is currently only one out-of-the-box data set for Belgium so the *Load demo* button won't work with other regions.
+
+[source,shell]
+----
+java -jar target/optaweb-vehicle-routing-backend-*.jar \
+--app.routing.osm-file=massachusetts-latest.osm.pbf \
+--app.region.country-codes=US
+----
+
+[CAUTION]
+.Using large OSM files
+====
+For best user experience, use smaller regions like individual European or US states.
+Using OSM files larger than 1 GB will require significant RAM size and take a lot of time (up to several hours) for the initial processing.
+====
+
+=== Running the frontend
+
+. Install `npm`. If you're on Fedora, you can do this by running:
++
+[source,shell]
+----
+sudo dnf install npm
+----
+
+. Install dependencies:
++
+[source,shell]
+----
+cd optaweb-vehicle-routing-frontend
+npm install
+----
+
+. Run frontend:
++
+[source,shell]
+----
+npm start
+----
+
+. Open http://localhost:3000/ in a web browser.
+By default, the `npm start` command attempts to open this URL in your default browser.
+
+[TIP]
+.Prevent `npm start` from launching your default browser
+====
+If you don't want `npm start` to open a new browser tab each time you run it,
+export an environment variable `BROWSER=none`.
+
+You can use `.env.local` file to make this preference permanent.
+To do that, run
+
+[source,shell]
+----
+echo BROWSER=none >> .env.local
+----
+====
