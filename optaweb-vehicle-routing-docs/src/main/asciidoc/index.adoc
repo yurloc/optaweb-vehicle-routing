@@ -1,1 +1,11 @@
 = OptaWeb Vehicle Routing User Guide
+The OptaPlanner Team <https://www.optaplanner.org/community/team.html>
+:doctype: book
+:sectnums:
+:toc:
+
+include::user-guide.adoc[]
+
+include::development.adoc[]
+
+include::openshift.adoc[]
