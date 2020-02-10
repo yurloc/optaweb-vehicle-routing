@@ -4,6 +4,8 @@ The OptaPlanner Team <https://www.optaplanner.org/community/team.html>
 :sectnums:
 :toc:
 
+include::introduction.adoc[]
+
 include::quickstart.adoc[]
 
 include::user-guide.adoc[]
