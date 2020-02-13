@@ -12,3 +12,7 @@ With *OptaWeb Vehicle Routing*, we're making a step further and building a refer
 "Where do I get the distances and travel times?",
 "How do I visualize the solution on a map?" or
 "How do I build an application that runs in the cloud?".
+
+.Structural diagram
+[.text-center]
+image::architecture.png[]
