@@ -12,3 +12,10 @@ With *OptaWeb Vehicle Routing*, we're making a step further and building a refer
 "Where do I get the distances and travel times?",
 "How do I visualize the solution on a map?" or
 "How do I build an application that runs in the cloud?".
+
+=== Goals
+
+We are building a *reference implementation* of a complete, production-ready application for planning routes of a fleet of vehicles.
+We are trying to put ourselves in shoes of a software development team, whose task is to build such application and has decided to use OptaPlanner for the route planning part.
+At the same time we aim for a smooth getting started experience so it is easy to start the application with little configuration out of the box even at the cost of using some components that are not meant for production.
+After evaluation period, it is possible to switch from the lightweight H2 database to PostgreSQL, from embedded GraphHopper routing engine to a commercial solution with service level agreement and up-to-date geographical data and so on.
