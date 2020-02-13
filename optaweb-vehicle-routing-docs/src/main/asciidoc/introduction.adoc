@@ -16,3 +16,7 @@ With *OptaWeb Vehicle Routing*, we're making a step further and building a refer
 .Structural diagram
 [.text-center]
 image::architecture.png[]
+
+.Deployment diagram
+[.text-center]
+image::deployment.png[]
