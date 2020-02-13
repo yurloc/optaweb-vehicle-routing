@@ -20,3 +20,7 @@ image::architecture.png[]
 .Deployment diagram
 [.text-center]
 image::deployment.png[]
+
+.Component diagram (backend)
+[.text-center]
+image::backend.png[]
