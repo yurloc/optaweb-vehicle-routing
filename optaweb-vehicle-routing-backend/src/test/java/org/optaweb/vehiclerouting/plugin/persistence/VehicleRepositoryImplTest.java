@@ -92,6 +92,11 @@ class VehicleRepositoryImplTest {
     }
 
     @Test
+    void create_vehicle_from_given_data() {
+        // TODO
+    }
+
+    @Test
     void remove_created_location_by_id() {
         Vehicle testVehicle = testVehicle();
         VehicleEntity locationEntity = mockVehicleEntity(testVehicle);
