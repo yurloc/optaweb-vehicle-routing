@@ -1,14 +1,19 @@
-**Thank you for submitting this pull request**
+<!-- Thank you for submitting this pull request -->
 
-**JIRA**: _(please edit the JIRA link if it exists)_ 
+**JIRA**:
 
-[link](https://www.example.com)
+<!-- Please add a JIRA ticket link if it exists -->
+<!-- Example: https://issues.redhat.com/browse/PLANNER-1234 -->
 
-**Referenced pull requests**: _(please edit the URLs of referenced pull requests if they exist)_
+**Referenced pull requests**:
 
-* paste the link(s) from GitHub here
-* link 2
-* link 3 etc.
+<!-- Please add URLs of all referenced pull requests if they exist -->
+<!-- Example:
+* https://github.com/kiegroup/droolsjbpm-build-bootstrap/pull/1234
+* https://github.com/kiegroup/drools/pull/3000
+* https://github.com/kiegroup/optaplanner/pull/899
+* etc.
+-->
 
 <details>
 <summary>
