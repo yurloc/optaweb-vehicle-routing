@@ -1,11 +1,11 @@
 <!-- Thank you for submitting this pull request -->
 
-**JIRA**:
+### JIRA
 
 <!-- Please add a JIRA ticket link if it exists -->
 <!-- Example: https://issues.redhat.com/browse/PLANNER-1234 -->
 
-**Referenced pull requests**:
+### Referenced pull requests
 
 <!-- Please add URLs of all referenced pull requests if they exist -->
 <!-- Example:
