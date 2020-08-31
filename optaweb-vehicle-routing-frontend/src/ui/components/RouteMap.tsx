@@ -99,6 +99,9 @@ const RouteMap: React.FC<Props> = ({
           positions={route.track}
           fill={false}
           color={color(index)}
+          smoothFactor={3}
+          weight={6}
+          opacity={0.75}
         />
       ))}
       {bounds && (
