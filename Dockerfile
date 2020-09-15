@@ -30,15 +30,15 @@ COPY . .
 RUN mvn clean package -DskipTests --projects :optaweb-vehicle-routing-standalone --also-make
 
 FROM adoptopenjdk/openjdk8:ubi-minimal-jre
-WORKDIR /opt/app
-VOLUME local
 
-COPY --from=builder /usr/src/optaweb/optaweb-vehicle-routing-standalone/target/*-exec.jar optaweb-vehicle-routing.jar
-
-ADD http://download.geofabrik.de/europe/france/mayotte-latest.osm.pbf openstreetmap/
-
-ENV APP_ROUTING_OSM_DIR=openstreetmap
 ENV APP_ROUTING_OSM_FILE=mayotte-latest.osm.pbf
 ENV APP_REGION_COUNTRY_CODES=FR
 CMD ["java", "-jar", "optaweb-vehicle-routing.jar"]
 EXPOSE 8080
+
+WORKDIR /app
+
+ADD http://download.geofabrik.de/europe/france/mayotte-latest.osm.pbf local/openstreetmap/
+COPY --from=builder /usr/src/optaweb/optaweb-vehicle-routing-standalone/target/*-exec.jar optaweb-vehicle-routing.jar
+
+VOLUME local
