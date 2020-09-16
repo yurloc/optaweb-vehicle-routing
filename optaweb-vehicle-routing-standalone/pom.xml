@@ -109,6 +109,7 @@
               <goal>repackage</goal>
             </goals>
             <configuration>
+              <classifier>exec</classifier>
               <mainClass>org.optaweb.vehiclerouting.OptaWebVehicleRoutingApplication</mainClass>
               <excludes>
                 <exclude>

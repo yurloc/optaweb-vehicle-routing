@@ -41,9 +41,9 @@ function standalone_jar_or_maven() {
   # and project.version is set using resource filtering during assembly.
 
   # shellcheck disable=SC2154
-  if [[ ! -f pom.xml && -f ${standalone}-${project.version}.jar ]]
+  if [[ ! -f pom.xml && -f ${standalone}-${project.version}-exec.jar ]]
   then
-    readonly jar=${standalone}-${project.version}.jar
+    readonly jar=${standalone}-${project.version}-exec.jar
     return 0
   fi
   # END: Distribution use case
@@ -69,7 +69,7 @@ The script will grep pom.xml for project version, which is not as reliable as us
 
   echo "Project version: ${version}"
 
-  readonly jar=${standalone}/target/${standalone}-${version}.jar
+  readonly jar=${standalone}/target/${standalone}-${version}-exec.jar
 
   if [[ ! -f ${jar} ]]
   then
