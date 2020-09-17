@@ -23,7 +23,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.io.Reader;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -57,16 +56,8 @@ class RoutingProblemConfig {
 
     @Bean
     RoutingProblemList routingProblems() {
-        ArrayList<RoutingProblem> problems = new ArrayList<>();
-        problems.add(dataSetMarshaller.unmarshal(belgiumReader()));
-        problems.addAll(localDataSets());
+        ArrayList<RoutingProblem> problems = new ArrayList<>(localDataSets());
         return new RoutingProblemList(problems);
-    }
-
-    private static Reader belgiumReader() {
-        return new InputStreamReader(
-                DemoService.class.getResourceAsStream("belgium-cities.yaml"),
-                StandardCharsets.UTF_8);
     }
 
     private static boolean isReadableDir(Path path) {
