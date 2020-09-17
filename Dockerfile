@@ -24,21 +24,16 @@
 # Run the image with production profile (using PostgreSQL database):
 # docker run -p 8080:8080 --rm -it -e SPRING_PROFILES_ACTIVE=production optaweb/vehicle-routing
 
-FROM adoptopenjdk/maven-openjdk8:latest as builder
-WORKDIR /usr/src/optaweb
-COPY . .
-RUN mvn clean package -DskipTests --projects :optaweb-vehicle-routing-standalone --also-make
-
 FROM adoptopenjdk/openjdk8:ubi-minimal-jre
 
-ENV APP_ROUTING_OSM_FILE=mayotte-latest.osm.pbf
-ENV APP_REGION_COUNTRY_CODES=FR
+ENV APP_ROUTING_OSM_FILE=boston.osm.pbf
+ENV APP_REGION_COUNTRY_CODES=US
 CMD ["java", "-jar", "optaweb-vehicle-routing.jar"]
 EXPOSE 8080
 
 WORKDIR /app
 
-ADD http://download.geofabrik.de/europe/france/mayotte-latest.osm.pbf local/openstreetmap/
-COPY --from=builder /usr/src/optaweb/optaweb-vehicle-routing-standalone/target/*-exec.jar optaweb-vehicle-routing.jar
+COPY optaweb-vehicle-routing-standalone/target/*-exec.jar optaweb-vehicle-routing.jar
+ADD ["https://docs.google.com/uc?export=download&id=1zfCar7alWFvaZewm60Upy7E8gyxmfLlN", "local/openstreetmap/boston.osm.pbf"]
 
 VOLUME local
