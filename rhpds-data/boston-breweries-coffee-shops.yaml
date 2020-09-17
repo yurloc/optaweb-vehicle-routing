@@ -1,0 +1,334 @@
+---
+name: "Boston Breweries and Coffee Shops"
+vehicles:
+- name: "Vehicle 1"
+  capacity: 8
+- name: "Vehicle 2"
+  capacity: 8
+- name: "Vehicle 3"
+  capacity: 8
+- name: "Vehicle 4"
+  capacity: 8
+- name: "Vehicle 5"
+  capacity: 8
+- name: "Vehicle 6"
+  capacity: 8
+- name: "Vehicle 7"
+  capacity: 8
+- name: "Vehicle 8"
+  capacity: 8
+- name: "Vehicle 9"
+  capacity: 8
+- name: "Vehicle 10"
+  capacity: 8
+- name: "Vehicle 11"
+  capacity: 8
+depot:
+  label: "Red Hat, 300 A Street, 300, A Street, Seaport District, Financial District,\
+    \ Boston, Suffolk County, Massachusetts, 02210, United States of America"
+  lat: 42.3486274
+  lng: -71.0502016
+visits:
+- label: "Idle Hands Craft Ales, 89, Commercial Street, Wellington, Medford, Middlesex\
+    \ County, Massachusetts, 02155, United States of America"
+  lat: 42.4087028
+  lng: -71.0886571
+- label: "Night Shift Brewery, 87, Santilli Highway, Hendersonville, Everett, Middlesex\
+    \ County, Massachusetts, 02149, United States of America"
+  lat: 42.4059393
+  lng: -71.0677001
+- label: "BearMoose Brewing Company, 1934, Revere Beach Parkway, Glendale, Everett,\
+    \ Middlesex County, Massachusetts, 02149, United States of America"
+  lat: 42.40283
+  lng: -71.051925
+- label: "Winter Hill Brewery, 328, Broadway, Winter Hill, Somerville, Middlesex County,\
+    \ Massachusetts, 02145, United States of America"
+  lat: 42.392656
+  lng: -71.0939776
+- label: "Remnant Brewing, Bow Market Way, Union Square, Somerville, Middlesex County,\
+    \ Massachusetts, 02143, United States of America"
+  lat: 42.3810326
+  lng: -71.0982625
+- label: "Aeronaut Brewing Co., 14, Tyler Street, Spring Hill, Somerville, Middlesex\
+    \ County, Massachusetts, 02143, United States of America"
+  lat: 42.3819723
+  lng: -71.1062676
+- label: "Lamplighter Brewing Company, 284, Broadway, Inman Square, Cambridge, Middlesex\
+    \ County, Massachusetts, 02139, United States of America"
+  lat: 42.3679737
+  lng: -71.0979339
+- label: "Cambridge Brewing Company, One Kendall Square, Cambridge, Middlesex County,\
+    \ Massachusetts, United States of America"
+  lat: 42.3666699
+  lng: -71.0907979
+- label: "Democracy Brewing, 35, Temple Place, Downtown Crossing, Financial District,\
+    \ Boston, Suffolk County, Massachusetts, 02110-1301, United States of America"
+  lat: 42.3551144
+  lng: -71.0620624
+- label: "Hopsters Brewing Co., 51, Sleeper Street, Waterfront, Financial District,\
+    \ Boston, Suffolk County, Massachusetts, 02210, United States of America"
+  lat: 42.3526443
+  lng: -71.048519
+- label: "Trillium Brewing, 50, Thomson Place, Seaport District, Financial District,\
+    \ Boston, Suffolk County, Massachusetts, 02210, United States of America"
+  lat: 42.3521489
+  lng: -71.0474876
+- label: "Harpoon, 306 Northern Ave, Northern Avenue, Seaport, South Boston, Boston,\
+    \ Suffolk County, Massachusetts, 02210, United States of America"
+  lat: 42.3465637
+  lng: -71.0348293
+- label: "Cheeky Monkey Brewing Co., 3, Lansdowne Street, Audubon Square, Back Bay,\
+    \ Boston, Suffolk County, Massachusetts, 02215, United States of America"
+  lat: 42.3473229
+  lng: -71.0947146
+- label: "Dorchester Brewing Company, 1250, Massachusetts Avenue, Uphams Corner, South\
+    \ Boston, Boston, Suffolk County, Massachusetts, 02125, United States of America"
+  lat: 42.3237107
+  lng: -71.0644763
+- label: "Turtle Swamp, 3377, Washington Street, Forest Hills, Roxbury, Boston, Suffolk\
+    \ County, Massachusetts, 02130, United States of America"
+  lat: 42.3089753
+  lng: -71.1053457
+- label: "Distraction Brewing Co., 2, Belgrade Avenue, Mount Hope, West Roxbury, Boston,\
+    \ Suffolk County, Massachusetts, 02131, United States of America"
+  lat: 42.286947
+  lng: -71.13016
+- label: "Mighty Squirrel Brewing Company, 411, Waverley Oaks Road, Eastview Park,\
+    \ Waltham, Middlesex County, Massachusetts, 02452, United States of America"
+  lat: 42.3875142
+  lng: -71.2031453
+- label: "Rock Bottom Brewing, 115, Stuart Street, Chinatown, Beacon Hill, Boston,\
+    \ Suffolk County, Massachusetts, 02116, United States of America"
+  lat: 42.351257
+  lng: -71.0650021
+- label: "Night Shift Brewing, 1, Lovejoy Wharf, Dock Square, West End, Boston, Suffolk\
+    \ County, Massachusetts, 02114, United States of America"
+  lat: 42.3673628
+  lng: -71.0594069
+- label: "Downeast Cider Company, 256, Marginal Street, Chelsea Square, Chelsea, Suffolk\
+    \ County, Massachusetts, 02150, United States of America"
+  lat: 42.3860306
+  lng: -71.0294107
+- label: "Bantam Cider Company, 40, Merriam Street, Union Square, Somerville, Middlesex\
+    \ County, Massachusetts, 02143, United States of America"
+  lat: 42.3784102
+  lng: -71.0917727
+- label: "Night Shift Brewing Coffee Bar, 1, Lovejoy Wharf, Dock Square, West End,\
+    \ Boston, Suffolk County, Massachusetts, 02114, United States of America"
+  lat: 42.3673628
+  lng: -71.0594069
+- label: "Caffee Lil Italy, 178, Salem Street, Dock Square, North End, Boston, Suffolk\
+    \ County, Massachusetts, 02113, United States of America"
+  lat: 42.366488
+  lng: -71.054789
+- label: "George Howell Coffee, 100, Hanover Street, Dock Square, North End, Boston,\
+    \ Suffolk County, Massachusetts, 02108, United States of America"
+  lat: 42.3625573
+  lng: -71.0573822
+- label: "Thinking Cup, 236, Hanover Street, Dock Square, North End, Boston, Suffolk\
+    \ County, Massachusetts, 02113, United States of America"
+  lat: 42.3631422
+  lng: -71.0554716
+- label: "Starbucks, 222, Cambridge Street, Downtown Crossing, Beacon Hill, Boston,\
+    \ Suffolk County, Massachusetts, 02114, United States of America"
+  lat: 42.361007
+  lng: -71.0665202
+- label: "Capitol Coffee House, 122, Bowdoin Street, Downtown Crossing, West End,\
+    \ Boston, Suffolk County, Massachusetts, 02133, United States of America"
+  lat: 42.3589395
+  lng: -71.0627908
+- label: "Starbucks, 63, Court Street, Dock Square, Financial District, Boston, Suffolk\
+    \ County, Massachusetts, 02108, United States of America"
+  lat: 42.3593222
+  lng: -71.0593024
+- label: "Starbucks, 27, School Street, Downtown Crossing, Financial District, Boston,\
+    \ Suffolk County, Massachusetts, 02108, United States of America"
+  lat: 42.3577408
+  lng: -71.059223
+- label: "Peet's Coffee, 129, Tremont Street, Downtown Crossing, Financial District,\
+    \ Boston, Suffolk County, Massachusetts, 02108, United States of America"
+  lat: 42.356628
+  lng: -71.061998
+- label: "Caffe Nero, Summer Street, Church Green, Financial District, Boston, Suffolk\
+    \ County, Massachusetts, 02110, United States of America"
+  lat: 42.3529846
+  lng: -71.0563866
+- label: "Starbucks, 240, Washington Street, Aberdeen, Brighton, Boston, Suffolk County,\
+    \ Massachusetts, 02135-3202, United States of America"
+  lat: 42.3475219
+  lng: -71.1494107
+- label: "Render Coffee, 121, Devonshire Street, Downtown Crossing, Financial District,\
+    \ Boston, Suffolk County, Massachusetts, 02109, United States of America"
+  lat: 42.3572653
+  lng: -71.0574318
+- label: "Blue Bottle Coffee, Bank of America Building, 100, Federal Street, Church\
+    \ Green, Financial District, Boston, Suffolk County, Massachusetts, 02110, United\
+    \ States of America"
+  lat: 42.3550559
+  lng: -71.0559572
+- label: "Tradesman Coffee Shop, 58, Batterymarch Street, Waterfront, Financial District,\
+    \ Boston, Suffolk County, Massachusetts, 02110, United States of America"
+  lat: 42.357267
+  lng: -71.053422
+- label: "Flat Black Coffee, 260, Franklin Street, Waterfront, Financial District,\
+    \ Boston, Suffolk County, Massachusetts, 02110, United States of America"
+  lat: 42.3567772
+  lng: -71.053804
+- label: "Starbucks, 30, Rowes Wharf, Waterfront, Financial District, Boston, Suffolk\
+    \ County, Massachusetts, 02110, United States of America"
+  lat: 42.3571387
+  lng: -71.0507043
+- label: "Starbucks, 2151, Mystic Valley Parkway, Somerville, Middlesex County, Massachusetts,\
+    \ 02155, United States of America"
+  lat: 42.4171069
+  lng: -71.1266333
+- label: "Starbucks, 222, Alewife Brook Parkway, Huron Village, Cambridge, Middlesex\
+    \ County, Massachusetts, 02138, United States of America"
+  lat: 42.3897139
+  lng: -71.1426844
+- label: "Starbucks, 260, Elm Street, Davis Square, Somerville, Middlesex County,\
+    \ Massachusetts, 02144, United States of America"
+  lat: 42.395615
+  lng: -71.1221621
+- label: "Starbucks, 1662, Massachusetts Avenue, Porter Square, Cambridge, Middlesex\
+    \ County, Massachusetts, 02138-2706, United States of America"
+  lat: 42.3819235
+  lng: -71.1199347
+- label: "Simon's Cofee Shop, 1736, Massachusetts Avenue, Porter Square, Cambridge,\
+    \ Middlesex County, Massachusetts, 02138, United States of America"
+  lat: 42.3844695
+  lng: -71.1196495
+- label: "Bourbon Coffee, 1815, Massachusetts Avenue, Porter Square, Cambridge, Middlesex\
+    \ County, Massachusetts, 02140, United States of America"
+  lat: 42.387404
+  lng: -71.1189351
+- label: "Cafe Rustica, Beacon Street, Spring Hill, Somerville, Middlesex County,\
+    \ Massachusetts, 02143, United States of America"
+  lat: 42.3789507
+  lng: -71.1071915
+- label: "Broadsheet Coffee Roasters, 100, Kirkland Street, Inman Square, Cambridge,\
+    \ Middlesex County, Massachusetts, 02138, United States of America"
+  lat: 42.3779605
+  lng: -71.1073717
+- label: "Fortissimo Cafe, 365;367;369;371;373;375;377, Somerville Avenue, Union Square,\
+    \ Somerville, Middlesex County, Massachusetts, 02143, United States of America"
+  lat: 42.3811681
+  lng: -71.0991017
+- label: "Blue Bottle Coffee, 40, Bow Street, Old Cambridge, Cambridge, Middlesex\
+    \ County, Massachusetts, 02138, United States of America"
+  lat: 42.3717394
+  lng: -71.1171118
+- label: "1369 Coffee House, 1369, Cambridge Street, Inman Square, Cambridge, Middlesex\
+    \ County, Massachusetts, 02139, United States of America"
+  lat: 42.3737928
+  lng: -71.100367
+- label: "Gypsy Place Coffee, 90, Hampshire Street, Inman Square, Cambridge, Middlesex\
+    \ County, Massachusetts, 02139, United States of America"
+  lat: 42.3691051
+  lng: -71.0955051
+- label: "Whole Foods Market, 340, River Street, Cambridgeport, Cambridge, Middlesex\
+    \ County, Massachusetts, 02139, United States of America"
+  lat: 42.361006
+  lng: -71.1139506
+- label: "Starbucks, 736, High Street, Islington, Westwood, Norfolk County, Massachusetts,\
+    \ 02090, United States of America"
+  lat: 42.2232021
+  lng: -71.2227537
+- label: "Starbucks, 875, Providence Highway, Dedham, Norfolk County, Massachusetts,\
+    \ 02026-6100, United States of America"
+  lat: 42.2349982
+  lng: -71.1796855
+- label: "Starbucks, 250, Providence Highway, East Dedham, Dedham Island, Dedham,\
+    \ Norfolk County, Massachusetts, 02026, United States of America"
+  lat: 42.2562698
+  lng: -71.1687498
+- label: "Starbucks, 75, Spring Street, Highland, West Roxbury, Boston, Suffolk County,\
+    \ Massachusetts, 02132-3226, United States of America"
+  lat: 42.2787498
+  lng: -71.1633056
+- label: "Mocha Java, 577, High Street, East Dedham, Dedham Island, Dedham, Norfolk\
+    \ County, Massachusetts, 02026, United States of America"
+  lat: 42.2482329
+  lng: -71.1729745
+- label: "Whole Foods Market, 300, Legacy Place, Endicott, Dedham, Norfolk County,\
+    \ Massachusetts, 02026-6100, United States of America"
+  lat: 42.2324694
+  lng: -71.1782252
+- label: "Caffè Nero, 200;202;204;206;208;210;212;214;218;220;226;228;229;232;234;236;238;240;242;244;246;248;250;260;264;280;287;289;291;298;299,\
+    \ Legacy Place, Endicott, Dedham, Norfolk County, Massachusetts, 02026-6100, United\
+    \ States of America"
+  lat: 42.2309854
+  lng: -71.1763525
+- label: "Starbucks, 910, Highland Avenue, Needham Heights, Needham, Norfolk County,\
+    \ Massachusetts, 02404, United States of America"
+  lat: 42.2932884
+  lng: -71.2350243
+- label: "Starbucks, 244, Needham Street, Newton Upper Falls, Newton, Middlesex County,\
+    \ Massachusetts, 02464, United States of America"
+  lat: 42.3093588
+  lng: -71.2141927
+- label: "Starbucks, 199, Boylston Street, Thompsonville, Newton, Middlesex County,\
+    \ Massachusetts, 02467, United States of America"
+  lat: 42.3214409
+  lng: -71.1760212
+- label: "Starbucks, 1810, Centre Street, Highland, West Roxbury, Boston, Suffolk\
+    \ County, Massachusetts, 02132, United States of America"
+  lat: 42.2871923
+  lng: -71.1530632
+- label: "Stacks Espresso Bar, 1169, Walnut Street, Four Corners, Newton Highlands,\
+    \ Newton, Middlesex County, Massachusetts, 02461, United States of America"
+  lat: 42.3219274
+  lng: -71.2062326
+- label: "Recreo Coffee & Roasterie, 1876, Centre Street, Highland, West Roxbury,\
+    \ Boston, Suffolk County, Massachusetts, 02132, United States of America"
+  lat: 42.2859033
+  lng: -71.1553
+- label: "Green T Coffee Shop - Rozzie, 873, South Street, Roslindale, West Roxbury,\
+    \ Boston, Suffolk County, Massachusetts, 02131-3025, United States of America"
+  lat: 42.2889846
+  lng: -71.1338312
+- label: "Coffee Break Cafe, Truman Parkway, Hyde Park, Boston, Suffolk County, Massachusetts,\
+    \ 02136-2460, United States of America"
+  lat: 42.2354416
+  lng: -71.1249886
+- label: "Starbucks, 552, Adams Street, East Milton, Milton, Norfolk County, Massachusetts,\
+    \ 02170, United States of America"
+  lat: 42.2583114
+  lng: -71.040013
+- label: "Starbucks, 37, Forbes Road, Five Corners, Braintree, Norfolk County, Massachusetts,\
+    \ 02184, United States of America"
+  lat: 42.2208737
+  lng: -71.0294034
+- label: "Starbucks, 250, Granite Street, Five Corners, Braintree, Norfolk County,\
+    \ Massachusetts, 02184, United States of America"
+  lat: 42.2189942
+  lng: -71.02345
+- label: "Starbucks, 130;132, Granite Street, Quincy Center, Quincy, Norfolk County,\
+    \ Massachusetts, 02169, United States of America"
+  lat: 42.2448011
+  lng: -71.0049066
+- label: "Starbucks, 1227;1229;1233;1237;1241;1245;1247;1253;1259, Hancock Street,\
+    \ Quincy Center, Quincy, Norfolk County, Massachusetts, 02169, United States of\
+    \ America"
+  lat: 42.2520129
+  lng: -71.0043622
+- label: "Starbucks, 184, Lincoln Street, Old Spain, Hingham, Plymouth County, Massachusetts,\
+    \ 02043, United States of America"
+  lat: 42.248755
+  lng: -70.9038345
+- label: "Starbucks, Marketplace Drive, 1265 Main, Cedarwood, Waltham, Middlesex County,\
+    \ Massachusetts, 02453-2728, United States of America"
+  lat: 42.3797685
+  lng: -71.2614963
+- label: "Starbucks, 2095, Commonwealth Avenue, Lasell Village, Auburndale, Newton,\
+    \ Middlesex County, Massachusetts, 02466, United States of America"
+  lat: 42.3477977
+  lng: -71.2455657
+- label: "Starbucks, 1019, Trapelo Road, Lakeview, Waltham, Middlesex County, Massachusetts,\
+    \ 02452, United States of America"
+  lat: 42.4111743
+  lng: -71.2331989
+- label: "Starbucks, 535, Trapelo Road, Waverley Square, Waverley, Belmont, Middlesex\
+    \ County, Massachusetts, 02178, United States of America"
+  lat: 42.3884853
+  lng: -71.1912032

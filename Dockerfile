@@ -33,6 +33,7 @@ EXPOSE 8080
 
 WORKDIR /app
 
+COPY rhpds-data/*.yaml local/dataset/
 COPY optaweb-vehicle-routing-standalone/target/*-exec.jar optaweb-vehicle-routing.jar
 ADD ["https://docs.google.com/uc?export=download&id=1zfCar7alWFvaZewm60Upy7E8gyxmfLlN", "local/openstreetmap/boston.osm.pbf"]
 
