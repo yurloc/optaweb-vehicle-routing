@@ -53,12 +53,7 @@ class GraphHopperRouter implements Router, DistanceCalculator, Region {
 
     @Override
     public List<Coordinates> getPath(Coordinates from, Coordinates to) {
-        GHRequest ghRequest = new GHRequest(
-                from.latitude().doubleValue(),
-                from.longitude().doubleValue(),
-                to.latitude().doubleValue(),
-                to.longitude().doubleValue());
-        PointList points = graphHopper.route(ghRequest).getBest().getPoints();
+        PointList points = route(from, to).getBest().getPoints();
         return StreamSupport.stream(points.spliterator(), false)
                 .map(ghPoint3D -> Coordinates.valueOf(ghPoint3D.lat, ghPoint3D.lon))
                 .collect(toList());
@@ -66,17 +61,22 @@ class GraphHopperRouter implements Router, DistanceCalculator, Region {
 
     @Override
     public long travelTimeMillis(Coordinates from, Coordinates to) {
-        GHRequest ghRequest = new GHRequest(
-                from.latitude().doubleValue(),
-                from.longitude().doubleValue(),
-                to.latitude().doubleValue(),
-                to.longitude().doubleValue());
-        GHResponse ghResponse = graphHopper.route(ghRequest);
+        GHResponse ghResponse = route(from, to);
         // TODO return wrapper that can hold both the result and error explanation instead of throwing exception
         if (ghResponse.hasErrors()) {
             throw new DistanceCalculationException("No route from " + from + " to " + to, ghResponse.getErrors().get(0));
         }
         return ghResponse.getBest().getTime();
+    }
+
+    private GHResponse route(Coordinates from, Coordinates to) {
+        GHRequest request = new GHRequest(
+                from.latitude().doubleValue(),
+                from.longitude().doubleValue(),
+                to.latitude().doubleValue(),
+                to.longitude().doubleValue());
+        request.setWeighting("shortest");
+        return graphHopper.route(request);
     }
 
     @Override

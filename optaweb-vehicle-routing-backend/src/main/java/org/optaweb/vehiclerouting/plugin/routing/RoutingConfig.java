@@ -96,6 +96,7 @@ class RoutingConfig {
         }
 
         graphHopper.setEncodingManager(EncodingManager.create(FlagEncoderFactory.CAR));
+        graphHopper.getCHFactoryDecorator().setWeightingsAsStrings("shortest", "fastest");
         graphHopper.importOrLoad();
         logger.info("GraphHopper graph loaded");
         return graphHopper;
